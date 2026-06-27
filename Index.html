@@ -1,0 +1,34 @@
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      margin: 20px;
+      cursor: pointer;
+      position: absolute;
+    }
+    #yes {
+      position: static;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Can I get your number? 😉</h1>
+
+  <button id="yes" onclick="alert('Good choice! Brunch? 😊')">Yes</button>
+  <button id="no">No</button>
+
+  <script>
+    const noBtn = document.getElementById("no");
+
+    noBtn.addEventListener("mouseover", () => {
+      const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+      const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
+    });
+  </script>
+
+</body>
+</html>
